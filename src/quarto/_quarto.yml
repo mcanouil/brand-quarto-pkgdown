@@ -12,6 +12,7 @@ website:
         text: About
       - href: rpkg/index.html
         text: "R Package"
+        target: _blank
 
 format:
   html:
