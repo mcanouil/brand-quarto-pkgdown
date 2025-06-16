@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: ../../docs
+
+website:
+  title: "Website"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: about.qmd
+        text: About
+      - href: rpkg/index.html
+        text: "R Package"
+
+format:
+  html:
+    theme:
+      - litera
+      - brand
+    css: styles.css
+    toc: true

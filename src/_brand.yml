@@ -1,0 +1,40 @@
+color:
+  palette:
+    iconic-black: "#000000"
+    radiant-white: "#ffffff"
+    eternal-gold: "#e3a535"
+    colour-01: "#006ef9"
+    colour-02: "#3ae2d8"
+  foreground: iconic-black
+  background: radiant-white
+  primary: colour-01
+  secondary: colour-02
+typography:
+  headings:
+    color: primary
+  link:
+    color: eternal-gold
+    decoration: underline
+defaults:
+  bootstrap:
+    defaults:
+      # Required to change navbar
+      navbar-fg: $brand-radiant-white
+      navbar-bg: $brand-iconic-black
+    rules: |
+      /* Required CSS for pkgdown navbar */
+      .navbar[data-bs-theme="light"] {
+        --bs-navbar-color: var(--brand-radiant-white) !important;
+        --bs-navbar-hover-color: var(--brand-eternal-gold) !important;
+        --bs-navbar-active-color: var(--brand-eternal-gold) !important;
+        --bs-navbar-brand-color: var(--brand-radiant-white) !important;
+        --bs-navbar-brand-hover-color: var(--brand-eternal-gold) !important;
+        color: var(--brand-radiant-white) !important;
+        background-color: var(--brand-iconic-black) !important;
+        & .navbar-brand a:hover {
+          color: var(--brand-eternal-gold) !important;
+        }
+        & .navbar-nav .nav-item.active .nav-link {
+          color: var(--brand-eternal-gold) !important;
+        }
+      }
